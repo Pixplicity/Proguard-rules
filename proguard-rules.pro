@@ -7,7 +7,7 @@
 -verbose
 
 #your package path where your gson models are stored
--keep class com.starbucks.emea.vo.** { *; }
+#-keep class your.package.name.here.** { *; }
 
 # The -optimizations option disables some arithmetic simplifications that Dalvik 1.0 and 1.5 can't handle.
 #-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*,!method/propagation/parameter
