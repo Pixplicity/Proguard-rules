@@ -94,8 +94,12 @@
 
 # Remove VERBOSE and DEBUG level log statements
 -assumenosideeffects class android.util.Log {
+    public static *** i(...);
     public static *** d(...);
     public static *** v(...);
+    public static *** e(...);
+    public static *** w(...);
+    public static *** wtf(...);
 }
 
 ##########################
@@ -204,3 +208,38 @@
 
 ## Cupboard
 -dontwarn nl.qbusict.cupboard.**
+
+## Mobfox ads SDK
+-keep class com.adsdk.** { *; }
+-keep class com.adsdk.sdk.** { *;}
+-keep class com.adsdk.sdk.video.** { *; }
+
+-keep class com.mobfox.** { *; }
+-keep class com.mobfox.adapter.** {*;}
+-keep class com.mobfox.sdk.** {*;}
+-keep class com.mobfox.sdk.data.** {*;}
+-keep class com.mobfox.video.** {*;}
+
+-keep class org.simpleframework.** { *; }
+-dontwarn javax.xml.stream.**
+
+-dontwarn com.adsdk.sdk.customevents.**
+
+## mediation libraries for Mobfox
+-dontwarn com.vungle.**
+-dontwarn com.millennialmedia.**
+-dontwarn com.mopub.**
+-dontwarn com.inmobi.monetization.**
+-dontwarn com.inmobi.commons.**
+-dontwarn com.flurry.**
+-dontwarn com.facebook.**
+-dontwarn com.chartboost.**
+-dontwarn com.amazon.**
+-dontwarn com.unity3d.**
+-dontwarn com.jirbo.adcolony.**
+
+# Widespace
+-keep class com.widespace.internal.interfaces.** {
+   *;
+}
+-dontwarn com.widespace.adspace.helpers.AttributesParseHelper
